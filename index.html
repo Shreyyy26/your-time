@@ -1,0 +1,149 @@
+<html>
+<head>
+<title>Y Y Y</title>
+</head>
+<body>
+<div class="container"
+>
+<h1>IT'S YOUR TIME</h1>
+<h2>(F-ALL,U-SAY)</h2>
+
+<textarea id="userPOV"
+    placeholder="Express whatever's in your Dil or mind, coz no one's gonna see your Delore mild..."
+    rows="8"
+    cols="41">
+</textarea>
+
+<br>
+
+<button onclick="replyBot()">done</button>
+<p id="reply"></p>
+</div>
+
+<script>
+let typingInterval;
+
+  function typereply(text) {
+  const replyElement = document.getElementById("reply");
+
+  replyElement.innerText = "Typing...";
+ 
+setTimeout(() => {
+   replyElement.innerText = "";
+  
+let index = 0;
+
+  clearInterval(typingInterval);
+
+  typingInterval = setInterval(() =>
+{
+    replyElement.innerText += text[index];
+    index++;
+
+    if (index >= text.length) {
+      clearInterval(typingInterval);
+    }
+  }, 60);
+}, 1200);
+}
+
+   function replyBot() 
+   {
+     var message =
+  document.getElementById("userPOV").value;
+  
+        if (message.trim() === "")
+ {
+ typereply("I see you won't written anything 🥲.");
+  }
+  else if (message.length < 100)
+  {
+  typereply("I see, no worry 😅.");
+  }
+  else if (message.length <200)
+  {
+  typereply("It's fine atleast you share it 🫂.");
+ }
+  else {
+   typereply("All be good, Don't take stress, stay strong and healthy 💓.");
+   }
+ }
+</script>
+
+<style>
+   body {
+         background-color: #121212;
+         font-family: Arial, sans-serif;
+         margin: 0;
+         min-height: 100vh;
+
+         display: flex;
+         justify-content: center;
+         align-items: center
+        }
+  .container {
+        text-align: center;
+        background-color: #1e1e1e;
+        padding: 30px;
+        border-radius; 12px;
+        width: 90%;
+        max-width:420px;
+   }
+   h1 {
+         color: #f5c16c;
+         font-size: 42px;
+         margin-bottom: 5px;
+      }
+h2 {
+         color: #aaaaaa;
+         font-size: 14px;
+         margin-bottom: 20px;
+      }
+p {
+         color: #d1d1d1;
+         font-size: 18px;
+         margin-bottom: 20px;
+         white-space: pre-wrap;
+      }
+
+button {
+         margin-top: 15px;
+  padding: 10px 25px;
+
+  background-color: #f5c16c;
+  color: #121212;
+
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ffd98e;
+      }
+
+textarea {
+         width: 100%;
+  background-color: #2a2a2a;
+  color: #eaeaea;
+
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+
+  resize: none;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #888888;
+     }
+
+</style>
+
+</body>
+</html>
