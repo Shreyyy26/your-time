@@ -1,10 +1,13 @@
 <html>
 <head>
-<title>Y Y Y</title>
+<title>YOUR TIME - Y Y Y</title>
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0">
 </head>
 <body>
-<div class="container"
->
+<div class="container">
+
 <h1>IT'S YOUR TIME</h1>
 <h2>(F-ALL,U-SAY)</h2>
 
@@ -19,6 +22,11 @@
 <button onclick="replyBot()">done</button>
 <p id="reply"></p>
 </div>
+<footer>
+<p class="footer">
+ A Y Y Y PROJECT
+</footer>
+
 
 <script>
 let typingInterval;
@@ -44,7 +52,7 @@ let index = 0;
       clearInterval(typingInterval);
     }
   }, 60);
-}, 1200);
+}, 300);
 }
 
    function replyBot() 
@@ -58,7 +66,7 @@ let index = 0;
   }
   else if (message.length < 100)
   {
-  typereply("I see, no worry 😅.");
+  typereply("I see 😅.");
   }
   else if (message.length <200)
   {
@@ -78,27 +86,34 @@ let index = 0;
          min-height: 100vh;
 
          display: flex;
-         justify-content: center;
-         align-items: center
+         flex-direction:column;
         }
+
   .container {
-        text-align: center;
-        background-color: #1e1e1e;
-        padding: 30px;
-        border-radius; 12px;
-        width: 90%;
-        max-width:420px;
+       flex: 1;
+       display: flex;
+       flex-direction:column;
+
+      justify-content: center;
+      align-items: center;
+
+      width:90%;
+      max-width: 420px;
+      margin: auto;
    }
+
    h1 {
          color: #f5c16c;
          font-size: 42px;
          margin-bottom: 5px;
       }
+
 h2 {
          color: #aaaaaa;
          font-size: 14px;
          margin-bottom: 20px;
       }
+
 p {
          color: #d1d1d1;
          font-size: 18px;
@@ -143,7 +158,23 @@ textarea::placeholder {
   color: #888888;
      }
 
+footer {
+ text-align: center;
+ padding: 12px;
+ color: #888;
+ font-size: 14px;
+
+}
+
+.footer {
+ opacity: 0.6;
+ letter-spacing: 6px;
+font-size: 12px;
+ text-align: center;
+}
+
 </style>
+
 
 </body>
 </html>
